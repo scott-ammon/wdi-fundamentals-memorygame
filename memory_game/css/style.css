@@ -1,0 +1,102 @@
+header {
+	padding: 30px 20px;
+	color: #fff;
+	background-color: #f15b31;
+}
+
+nav {
+	padding: 20px 0;
+	color: #fff;
+	background-color: #00a6b3;
+}
+
+body { 
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+main {
+  width: 850px;
+  margin: 35px auto;
+}
+
+h1 {
+	margin: 0;
+	font: 400 45px "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+a {
+	margin: 0 20px;
+	font: 600 18px "Raleway", sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+
+h2 {
+	font: 600 20px "Raleway", sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #0d2c40;
+}
+
+.game-description {
+	font: 18px "Droid Serif", serif;
+	line-height: 26px;
+	color: #0d2c40;
+}
+
+img {
+	margin: 40px 8px 0px 8px;
+}
+
+/*These footer styles aren't working properly, 
+they aren't applying styles to the <p>'s within them.*/
+footer {
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	background-color: #0d2c40;
+	color: white;
+}
+
+.copyright,
+.message {
+	font-family: "Raleway", sans-serif;
+}
+
+.copyright {
+	float: left;
+}
+
+.message {
+	float: right;
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+.name {
+	font-weight: 700;
+	color: #f15b31;
+}
+
+a {
+	border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-color: white;
+}
