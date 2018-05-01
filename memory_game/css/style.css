@@ -54,6 +54,12 @@ img {
 	margin: 40px 8px 0px 8px;
 }
 
+button {
+	margin-top: 20px;
+	font: 18px "Raleway", serif;
+	text-transform: uppercase;
+}
+
 /*These footer styles aren't working properly, 
 they aren't applying styles to the <p>'s within them.*/
 footer {

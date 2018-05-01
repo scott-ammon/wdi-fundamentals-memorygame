@@ -20,9 +20,13 @@ var cards = [
   	cardImage: "images/king-of-diamonds.png"
   }
 ];
+
 var cardsInPlay = [];
 
+/* Changes image source to display flipped card, checks 
+   for a match if two cards have been flipped up. */
 var checkForMatch = function() {
+
 	if (cardsInPlay.length === 2) {
 		if (cardsInPlay[0] === cardsInPlay[1]) {
 			alert('You found a match!');
@@ -33,14 +37,51 @@ var checkForMatch = function() {
 	}
 }
 
-var flipCard = function(cardId) {
-
-  console.log('User flipped ' + cards[cardId].rank);
+/* Saves id # of the clicked card, and adds clicked 
+   card to cardsInPlay array */
+var flipCard = function() {
+  
+  var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
-  console.log(cards[cardId].cardImage);
-  console.log(cards[cardId].suit);
+  
+  this.setAttribute('src', cards[cardId].cardImage);
   checkForMatch();
 }
 
-flipCard(0);
-flipCard(2);
+/* Creates four cards and displays the face down image,
+   waits for user to click a card and calls flipCard function. */
+var createBoard = function() {
+	for(var i = 0; i < cards.length; i++) {
+    var cardElement = document.createElement('img');
+    cardElement.setAttribute('src','images/back.png');
+    cardElement.setAttribute('data-id', i);
+    cardElement.addEventListener('click', flipCard);
+    document.getElementById('game-board').appendChild(cardElement);
+	}
+}
+
+createBoard();
+
+var restartGame = function() {
+  var allCards = document.getElementsByTagName('img');
+
+  for(var i = 0; i < cards.length; i++) {
+  	allCards[i].setAttribute('src','images/back.png');
+  }
+
+  cardsInPlay = [];
+}
+
+var restartButton = document.getElementById('button');
+restartButton.addEventListener('click', restartGame);
+
+
+
+
+
+
+
+
+
+
+
