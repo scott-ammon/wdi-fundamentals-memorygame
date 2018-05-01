@@ -1,40 +1,44 @@
 var cards = [
   {
-  	rank: "queen",
-  	suit: "hearts",
-  	cardImage: "images/queen-of-hearts.png"
+    rank: "queen",
+    suit: "hearts",
+    cardImage: "images/queen-of-hearts.png"
   },
   {
-  	rank: "queen",
-  	suit: "diamonds",
-  	cardImage: "images/queen-of-diamonds.png"
+    rank: "queen",
+    suit: "diamonds",
+    cardImage: "images/queen-of-diamonds.png"
   },
   {
-  	rank: "king",
-  	suit: "hearts",
-  	cardImage: "images/king-of-hearts.png"
+    rank: "king",
+    suit: "hearts",
+    cardImage: "images/king-of-hearts.png"
   },
   {
-  	rank: "king",
-  	suit: "diamonds",
-  	cardImage: "images/king-of-diamonds.png"
+    rank: "king",
+    suit: "diamonds",
+    cardImage: "images/king-of-diamonds.png"
   }
 ];
 
 var cardsInPlay = [];
 
+// global variable to store user's score
+var userScore = 0;
+
 /* Changes image source to display flipped card, checks 
    for a match if two cards have been flipped up. */
 var checkForMatch = function() {
 
-	if (cardsInPlay.length === 2) {
-		if (cardsInPlay[0] === cardsInPlay[1]) {
-			alert('You found a match!');
-		}
-		else {
-			alert('Sorry, try again.');
-		}
-	}
+  if (cardsInPlay.length === 2) {
+    if (cardsInPlay[0] === cardsInPlay[1]) {
+      alert('You found a match!');
+      userScore+=1;
+    }
+    else {
+      alert('Sorry, try again.');
+    }
+  }
 }
 
 /* Saves id # of the clicked card, and adds clicked 
@@ -51,7 +55,7 @@ var flipCard = function() {
 /* Creates four cards and displays the face down image,
    waits for user to click a card and calls flipCard function. */
 var createBoard = function() {
-	for(var i = 0; i < cards.length; i++) {
+  for(var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement('img');
     cardElement.setAttribute('src','images/back.png');
     cardElement.setAttribute('data-id', i);
@@ -66,9 +70,9 @@ var restartGame = function() {
   var allCards = document.getElementsByTagName('img');
 
   for(var i = 0; i < cards.length; i++) {
-  	allCards[i].setAttribute('src','images/back.png');
+    allCards[i].setAttribute('src','images/back.png');
   }
-
+  
   cardsInPlay = [];
 }
 
