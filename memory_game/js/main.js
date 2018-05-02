@@ -60,7 +60,7 @@ var createBoard = function() {
     cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
     document.getElementById('js-game-board').appendChild(cardElement);
-	}
+  }
 }
 
 createBoard();
@@ -72,7 +72,7 @@ var restartGame = function() {
   for(var i = 0; i < cards.length; i++) {
     allCards[i].setAttribute('src','images/back.png');
   }
-  
+
   cardsInPlay = [];
 }
 
