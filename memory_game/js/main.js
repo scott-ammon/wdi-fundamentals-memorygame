@@ -31,14 +31,12 @@ var userScore = 0;
 /* Changes image source to display flipped card, checks 
    for a match if two cards have been flipped up. */
 var checkForMatch = function() {
-
   if (cardsInPlay.length === 2) {
     if (cardsInPlay[0] === cardsInPlay[1]) {
       alert('You found a match!');
       userScore+=1;
       document.getElementById('score').innerHTML = "Your Score: " + userScore;
-    }
-    else {
+    } else {
       alert('Sorry, try again.');
     }
   }
@@ -47,7 +45,6 @@ var checkForMatch = function() {
 /* Saves id # of the clicked card, and adds clicked 
    card to cardsInPlay array */
 var flipCard = function() {
-  
   var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
   this.setAttribute('src', cards[cardId].cardImage);
