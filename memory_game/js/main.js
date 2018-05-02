@@ -1,3 +1,5 @@
+// JS for Memory Game
+
 var cards = [
   {
     rank: "queen",
@@ -34,6 +36,7 @@ var checkForMatch = function() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
       alert('You found a match!');
       userScore+=1;
+      document.getElementById('score').innerHTML = "Your Score: " + userScore;
     }
     else {
       alert('Sorry, try again.');
@@ -47,7 +50,6 @@ var flipCard = function() {
   
   var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
-  
   this.setAttribute('src', cards[cardId].cardImage);
   checkForMatch();
 }
@@ -60,12 +62,13 @@ var createBoard = function() {
     cardElement.setAttribute('src','images/back.png');
     cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
-    document.getElementById('game-board').appendChild(cardElement);
+    document.getElementById('js-game-board').appendChild(cardElement);
 	}
 }
 
 createBoard();
 
+/* Function to flip the cards back over and restart the game */
 var restartGame = function() {
   var allCards = document.getElementsByTagName('img');
 

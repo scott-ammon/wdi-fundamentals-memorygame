@@ -1,3 +1,4 @@
+/* ================== Main Page Content Styles =================== */
 header {
   padding: 30px 20px;
   color: #fff;
@@ -17,23 +18,14 @@ body {
 }
 
 main {
-  width: 850px;
   margin: 35px auto;
+  width: 850px;
 }
 
 h1 {
   margin: 0;
   font: 400 45px "Raleway", sans-serif;
   text-transform: uppercase;
-  color: #fff;
-}
-
-a {
-  margin: 0 20px;
-  font: 600 18px "Raleway", sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
   color: #fff;
 }
 
@@ -44,24 +36,40 @@ h2 {
   color: #0d2c40;
 }
 
+/* ========== Card images initialized with JavaScript ============ */
+img {
+  margin: 40px 8px 0px 8px;
+}
+
+/* ========================== Paragraph ========================== */
+p {
+  margin: 20px;
+  font: 18px "Raleway", serif;
+  text-transform: uppercase;
+}
+
 .game-description {
   font: 18px "Droid Serif", serif;
   line-height: 26px;
   color: #0d2c40;
 }
 
-img {
-  margin: 40px 8px 0px 8px;
-}
-
+/* =========================== Button ============================ */
 button {
   margin-top: 20px;
-  font: 18px "Raleway", serif;
+  font: 600 18px "Raleway", serif;
   text-transform: uppercase;
+  border: 2px solid #f15b31;
+  border-radius: 6px;
+  background-color: #fff;
 }
 
-/*These footer styles aren't working properly, 
-they aren't applying styles to the <p>'s within them.*/
+button:hover {
+  background-color: #f15b31;
+  color: #000;
+}
+
+/* =========================== Footer ============================ */
 footer {
   padding: 0 20px;
   font-size: 14px;
@@ -72,11 +80,17 @@ footer {
   color: white;
 }
 
+.name {
+  font-weight: 700;
+  color: #f15b31;
+}
+
 .copyright,
 .message {
   font-family: "Raleway", sans-serif;
 }
 
+/* =====================  Float Positioning  ===================== */
 .copyright {
   float: left;
 }
@@ -94,13 +108,15 @@ footer {
   font-size: 0;
 }
 
-.name {
-  font-weight: 700;
-  color: #f15b31;
-}
-
+/* ===========================  Links  =========================== */
 a {
+  margin: 0 20px;
   border-bottom: 2px solid transparent;
+  font: 600 18px "Raleway", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
