@@ -1,93 +1,131 @@
+/* Styles for Memory Game */
+/** {
+  border: 1px solid black;
+}*/
 /* ================== Main Page Content Styles =================== */
+body {
+  background-image: url("../images/stars-background.png");
+  background-size: cover;
+}
+
 header {
-  padding: 30px 20px;
+  padding: 20px 20px;
   color: #fff;
-  background-color: #f15b31;
 }
 
 nav {
-  padding: 20px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0;
   color: #fff;
-  background-color: #00a6b3;
+  text-align: center;
 }
 
 body { 
   margin: 0;
-  text-align: center;
   text-decoration: none;
+  background-color: #fff;
 }
 
 main {
   margin: 35px auto;
   width: 850px;
+  text-align: center;
 }
 
 h1 {
   margin: 0;
-  font: 400 45px "Raleway", sans-serif;
-  text-transform: uppercase;
-  color: #fff;
+  line-height: .1em;
+  text-align: center;
+  font: 60px "Audiowide", sans-serif;
+  color: #ffc811;
 }
 
 h2 {
-  font: 600 20px "Raleway", sans-serif;
+  font: 400 20px "Open Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #0d2c40;
+  color: #ffc811;
+}
+
+#js-outcome {
+  /*padding-bottom: 0;*/
+  height: 20px;
 }
 
 /* ========== Card images initialized with JavaScript ============ */
 img {
-  margin: 40px 8px 0px 8px;
+  margin: 10px 8px 0px 8px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  opacity: .7;
 }
 
 /* ========================== Paragraph ========================== */
 p {
   margin: 20px;
-  font: 18px "Raleway", serif;
-  text-transform: uppercase;
+  /*font: 16px "Open Sans", serif;*/
 }
 
 .game-description {
-  font: 18px "Droid Serif", serif;
-  line-height: 26px;
-  color: #0d2c40;
+  height: 60px;
+  font: 300 18px "Open Sans", serif;
+  text-align: justify;
+  line-height: 20px;
+  color: #fff;
 }
 
-/* =========================== Button ============================ */
+.scoreboard {
+  font: 400 18px "Open Sans", serif;
+  color: #fff;
+}
+
+/* =========================== Buttons ============================ */
 button {
-  margin-top: 20px;
-  font: 600 18px "Raleway", serif;
+  font: 400 18px "Open Sans", serif;
   text-transform: uppercase;
-  border: 2px solid #f15b31;
-  border-radius: 6px;
-  background-color: #fff;
+  color: #fff;
+  border: none;
+  background-color: transparent;
 }
 
 button:hover {
-  background-color: #f15b31;
+  background-color: #fff;
   color: #000;
+}
+
+.flipShuffle {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
 }
 
 /* =========================== Footer ============================ */
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   padding: 0 20px;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .08em;
-  background-color: #0d2c40;
-  color: white;
+  background-color: #000;
 }
 
 .name {
   font-weight: 700;
-  color: #f15b31;
+  color: #ffc811;
 }
 
 .copyright,
 .message {
-  font-family: "Raleway", sans-serif;
+  margin: 5px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
 }
 
 /* =====================  Float Positioning  ===================== */
@@ -97,6 +135,7 @@ footer {
 
 .message {
   float: right;
+  padding-right: 40px;
 }
 
 .clearfix:after {
@@ -110,9 +149,9 @@ footer {
 
 /* ===========================  Links  =========================== */
 a {
-  margin: 0 20px;
+  padding: 0 25px;
   border-bottom: 2px solid transparent;
-  font: 600 18px "Raleway", sans-serif;
+  font: 400 18px "Open Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
