@@ -1,11 +1,12 @@
-/* Styles for Memory Game */
-/** {
-  border: 1px solid black;
-}*/
+/* ==================== Styles for Memory Game =================== */
+
+
 /* ================== Main Page Content Styles =================== */
 body {
+  margin: 0;
   background-image: url("../images/stars-background.png");
   background-size: cover;
+  text-decoration: none;
 }
 
 header {
@@ -19,12 +20,6 @@ nav {
   padding: 0;
   color: #fff;
   text-align: center;
-}
-
-body { 
-  margin: 0;
-  text-decoration: none;
-  background-color: #fff;
 }
 
 main {
@@ -48,8 +43,7 @@ h2 {
   color: #ffc811;
 }
 
-#js-outcome {
-  /*padding-bottom: 0;*/
+.game-outcome {
   height: 20px;
 }
 
@@ -64,7 +58,6 @@ img {
 /* ========================== Paragraph ========================== */
 p {
   margin: 20px;
-  /*font: 16px "Open Sans", serif;*/
 }
 
 .game-description {
@@ -94,7 +87,7 @@ button:hover {
   color: #000;
 }
 
-.flipShuffle {
+.game-reset {
   margin-top: 40px;
   margin-left: 10px;
   margin-right: 10px;

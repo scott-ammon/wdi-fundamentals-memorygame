@@ -1,4 +1,11 @@
-// JS for Memory Game
+/* ====================== JS for Memory Game ================================== 
+Added functionality beyond GA prework assignment:
+- program tracks and displays user score every time they find a match
+- added function to flip all cards back over after a win/loss
+- added a shuffle function to randomize the order of the cards array data-id's
+- added instruction & about buttons that toggle what text is displayed
+============================================================================ */
+
 
 var cards = [
   {
@@ -111,7 +118,10 @@ shuffleButton.addEventListener('click', shuffleCards);
 
 // Function to display the instructions
 var showInstructions = function() {
-  document.getElementById('instructionParagraph').innerHTML = "Flip a card over by clicking on it. If the suits of the two cards you flip match, you win! Press FLIP to turn all the cards face down again, and SHUFFLE if you want to mix up the deck.";
+  document.getElementById('instructionParagraph').innerHTML = "Flip a card over \
+  by clicking on it. If the suits of the two cards you flip match, you win! \
+  Press FLIP to turn all the cards face down again, and SHUFFLE if you want to \
+  mix up the deck.";
 }
 
 var instructions = document.getElementById('js-instruction-button');
@@ -119,7 +129,11 @@ instructions.addEventListener('click', showInstructions);
 
 //Function to display the about section
 var showAbout = function() {
-  document.getElementById('instructionParagraph').innerHTML = "Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.";
+  document.getElementById('instructionParagraph').innerHTML = "Concentration, \
+  also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or \
+  simply Pairs, is a card game in which all of the cards are laid face down on \
+  a surface and two cards are flipped face up over each turn. The object of \
+  the game is to turn over pairs of matching cards.";
 }
 
 var about = document.getElementById('js-about-button');
