@@ -3,11 +3,11 @@ First use of JavaScript, creating a 'memory game' for General Assembly's WDI cou
 
 Original version of game based on GA requirements:
 
-![originalGame](/screenshots/game-v1.png?raw=true)
+![originalGame](memory-game-v2/screenshots/game-v1.png?raw=true)
 
 Upgraded version of the game:
 
-![upgradedGame](/screenshots/game-v2.png?raw=true)
+![upgradedGame](memory-game-v2/screenshots/game-v2.png?raw=true)
 
 The upgraded version includes the additional functionality:
 * Program tracks and displays user score every time a match is found
